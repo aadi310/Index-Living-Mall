@@ -582,7 +582,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
                 {/* Index Living Mall Logo */}
                 <img
-                  src="/images/design-mode/unnamed.jgp"
+                  src="/images/design-mode/indexmall.png"
                   alt="Index Living Mall"
                   className="h-14 w-auto bg-white rounded-lg p-1.5"
                 />
