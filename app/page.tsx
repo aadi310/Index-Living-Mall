@@ -100,6 +100,28 @@ export default function Home() {
   const [rating, setRating] = useState(0)
   const [feedbackText, setFeedbackText] = useState("")
 
+  // Loyalty (JOY Card) program state
+  const [loyaltyForm, setLoyaltyForm] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    branch: "",
+  })
+  const [loyaltySubmitted, setLoyaltySubmitted] = useState(false)
+
+  const handleLoyaltyChange = (field: string, value: string) => {
+    setLoyaltyForm((prev) => ({ ...prev, [field]: value }))
+  }
+
+  const handleLoyaltySubmit = () => {
+    if (!loyaltyForm.name || !loyaltyForm.mobile) {
+      alert("Please fill in your name and mobile number.")
+      return
+    }
+    setLoyaltySubmitted(true)
+    setTimeout(() => setLoyaltySubmitted(false), 5000)
+  }
+
   const copyCoupon = (code: string) => {
     navigator.clipboard.writeText(code)
     setCouponToast(true)
@@ -549,15 +571,15 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
   }
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/6628986420", "_blank")
+    window.open("https://wa.me/+919620921294", "_blank")
   }
 
   const handleCall = () => {
-    window.open("tel:+6628986420", "_blank")
+    window.open("tel:+919620921294", "_blank")
   }
 
   const handleEmail = () => {
-    window.open("mailto:customer_service@indexlivingmall.com", "_blank")
+    window.open("mailto:sagar.p@proenx.com", "_blank")
   }
 
   const handleSocialLink = (url: string) => {
@@ -659,7 +681,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       <ChevronRight className={`h-4 w-4 mr-2 text-black transition-transform duration-200 ${expandedProducts.includes(product.id) ? "rotate-90" : ""}`} />
                       <div>
                         <div className="font-medium text-sm text-gray-900">{product.name}</div>
-                        
+
                       </div>
                     </div>
                     <div className="text-right">
@@ -766,33 +788,27 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             </div>
           </div>
 
-          {/* Index Living Mall Promo Banners */}
+          {/* Index Living Mall Promo Banners — 1920x775 aspect ratio */}
 
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md overflow-hidden mx-3 mt-4 relative font-poppins">
 
             <Carousel className="w-full" setApi={setPromoApi} opts={{ loop: true }}>
               <CarouselContent>
 
-                {/* Banner 1 — Bedroom Collection */}
+                {/* Banner 1 — Flash Deal */}
                 <CarouselItem>
-                  <div className="relative w-full aspect-square bg-[#FFF8E1]">
-                    <a href="https://www.indexlivingmall.com/bedroom" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
-                      <Image src="/images/design-mode/hamper_1.png" alt="Index Living Mall Bedroom Collection" fill className="object-contain" priority />
-                    </a>
-                    <a href="https://www.indexlivingmall.com/bedroom" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 right-4">
-                      <button className="bg-[#FFC72C] text-black text-xs font-semibold px-4 py-2 rounded-lg shadow-sm">Shop Bedroom</button>
+                  <div className="relative w-full aspect-[1920/775] bg-[#FFF8E1]">
+                    <a href="https://www.indexlivingmall.com/online-promotion/flash-deal" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
+                      <Image src="/images/design-mode/index-banner-1.png" alt="Index Living Mall Flash Deal" fill className="object-cover" priority />
                     </a>
                   </div>
                 </CarouselItem>
 
-                {/* Banner 2 — Living Room Collection */}
+                {/* Banner 2 — Work Space */}
                 <CarouselItem>
-                  <div className="relative w-full aspect-square bg-[#FFF8E1]">
-                    <a href="https://www.indexlivingmall.com/living-room" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
-                      <Image src="/images/design-mode/11._F3716__Khoya_Modak.png" alt="Index Living Mall Living Room Collection" fill className="object-contain" />
-                    </a>
-                    <a href="https://www.indexlivingmall.com/living-room" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 right-4">
-                      <button className="bg-[#FFC72C] text-black text-xs font-semibold px-4 py-2 rounded-lg shadow-sm">Shop Living Room</button>
+                  <div className="relative w-full aspect-[1920/775] bg-[#FFF8E1]">
+                    <a href="https://www.indexlivingmall.com/online-promotion/work-space" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
+                      <Image src="/images/design-mode/index-banner-2.png" alt="Index Living Mall Work Space Promotion" fill className="object-cover" />
                     </a>
                   </div>
                 </CarouselItem>
@@ -910,6 +926,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             </div>
           </div>
 
+          {/* Support */}
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
             <div className="flex items-center mb-3">
               <div className="bg-black p-2 rounded-lg mr-3">
@@ -932,6 +949,88 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                 <span className="text-[11px] font-medium text-gray-700">Email</span>
               </button>
             </div>
+          </div>
+
+          {/* JOY Card Loyalty Program */}
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
+            {loyaltySubmitted ? (
+              <div className="text-center py-6 bg-green-50 rounded-xl border border-green-100">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <div className="text-sm font-semibold text-gray-900 mb-1">Welcome to JOY Card!</div>
+                <div className="text-xs text-gray-500">We'll send your membership confirmation to your email shortly.</div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="flex items-center mb-1">
+                  <div className="bg-black p-2 rounded-lg mr-3">
+                    <Gift className="h-4 w-4 text-[#FFC72C]" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-900">Join JOY Card</h3>
+                    <p className="text-[11px] text-gray-500">Earn points on every purchase & unlock member-only deals</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Full Name</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. Nichakarn Srisuk"
+                      value={loyaltyForm.name}
+                      onChange={(e) => handleLoyaltyChange("name", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Mobile Number</label>
+                    <input
+                      type="tel"
+                      placeholder="e.g. 08X-XXX-XXXX"
+                      value={loyaltyForm.mobile}
+                      onChange={(e) => handleLoyaltyChange("mobile", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Email Address</label>
+                    <input
+                      type="email"
+                      placeholder="e.g. name@email.com"
+                      value={loyaltyForm.email}
+                      onChange={(e) => handleLoyaltyChange("email", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Preferred Branch</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. Bangna, Ekkamai, Rama 2..."
+                      value={loyaltyForm.branch}
+                      onChange={(e) => handleLoyaltyChange("branch", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  className="w-full bg-[#FFC72C] hover:bg-[#f0b81e] text-black h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
+                  onClick={handleLoyaltySubmit}
+                >
+                  Join JOY Card
+                </button>
+
+                <p className="text-[10px] text-center text-gray-400">Free to join. Collect points automatically with every purchase.</p>
+              </div>
+            )}
           </div>
 
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
@@ -997,7 +1096,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
               <div className="text-[11px] text-gray-500 mt-2 space-y-1 px-2 font-medium">
                 <p>• Offers and coupons are subject to availability and location.</p>
                 <p>• Prices include applicable VAT.</p>
-                <p>• Index Living Mall Loyalty Points are non-transferable and valid for 12 months from the date of purchase.</p>
+                <p>• JOY Card points are non-transferable and valid for 12 months from the date of purchase.</p>
                 <p>• For support visit www.indexlivingmall.com.</p>
               </div>
             )}
