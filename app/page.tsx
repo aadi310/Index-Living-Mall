@@ -531,7 +531,6 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 <div class="footer">
   <p><strong>Khob Khun! See you again at Index Living Mall.</strong></p>
   <p>Shop again at www.indexlivingmall.com</p>
-  <div class="powered">Powered by SmartBill</div>
 </div>
 
 </body>
@@ -1002,15 +1001,6 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                 <p>• For support visit www.indexlivingmall.com.</p>
               </div>
             )}
-
-            <div className="text-center mt-3 pt-3 border-t border-gray-100">
-              <div className="flex items-center justify-center space-x-1.5">
-                <span className="text-xs text-gray-400 font-medium">Powered by</span>
-                <span className="text-sm font-bold tracking-tight" style={{ color: "#003323" }}>
-                  SmartBill
-                </span>
-              </div>
-            </div>
           </div>
           <div id="height-marker" style={{ height: "1px" }} />
         </div>
