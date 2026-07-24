@@ -824,7 +824,90 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             </Carousel>
           </div>
 
+{/* JOY Card Loyalty Program */}
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
+            {loyaltySubmitted ? (
+              <div className="text-center py-6 bg-green-50 rounded-xl border border-green-100">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <div className="text-sm font-semibold text-gray-900 mb-1">Welcome to JOY Card!</div>
+                <div className="text-xs text-gray-500">We'll send your membership confirmation to your email shortly.</div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="flex items-center mb-1">
+                  <div className="bg-black p-2 rounded-lg mr-3">
+                    <Gift className="h-4 w-4 text-[#FFC72C]" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-900">Join JOY Card</h3>
+                    <p className="text-[11px] text-gray-500">Earn points on every purchase & unlock member-only deals</p>
+                  </div>
+                </div>
 
+                <div className="space-y-3">
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Full Name</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. Nichakarn Srisuk"
+                      value={loyaltyForm.name}
+                      onChange={(e) => handleLoyaltyChange("name", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Mobile Number</label>
+                    <input
+                      type="tel"
+                      placeholder="e.g. 08X-XXX-XXXX"
+                      value={loyaltyForm.mobile}
+                      onChange={(e) => handleLoyaltyChange("mobile", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Email Address</label>
+                    <input
+                      type="email"
+                      placeholder="e.g. name@email.com"
+                      value={loyaltyForm.email}
+                      onChange={(e) => handleLoyaltyChange("email", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Preferred Branch</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. Bangna, Ekkamai, Rama 2..."
+                      value={loyaltyForm.branch}
+                      onChange={(e) => handleLoyaltyChange("branch", e.target.value)}
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  className="w-full bg-[#FFC72C] hover:bg-[#f0b81e] text-black h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
+                  onClick={handleLoyaltySubmit}
+                >
+                  Join JOY Card
+                </button>
+
+                <p className="text-[10px] text-center text-gray-400">Free to join. Collect points automatically with every purchase.</p>
+              </div>
+            )}
+          </div>
+
+
+          
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
             {feedbackSubmitted ? (
               <div className="text-center py-6 bg-green-50 rounded-xl border border-green-100">
@@ -951,88 +1034,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             </div>
           </div>
 
-          {/* JOY Card Loyalty Program */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
-            {loyaltySubmitted ? (
-              <div className="text-center py-6 bg-green-50 rounded-xl border border-green-100">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
-                <div className="text-sm font-semibold text-gray-900 mb-1">Welcome to JOY Card!</div>
-                <div className="text-xs text-gray-500">We'll send your membership confirmation to your email shortly.</div>
-              </div>
-            ) : (
-              <div className="space-y-4">
-                <div className="flex items-center mb-1">
-                  <div className="bg-black p-2 rounded-lg mr-3">
-                    <Gift className="h-4 w-4 text-[#FFC72C]" />
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-900">Join JOY Card</h3>
-                    <p className="text-[11px] text-gray-500">Earn points on every purchase & unlock member-only deals</p>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Full Name</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. Nichakarn Srisuk"
-                      value={loyaltyForm.name}
-                      onChange={(e) => handleLoyaltyChange("name", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Mobile Number</label>
-                    <input
-                      type="tel"
-                      placeholder="e.g. 08X-XXX-XXXX"
-                      value={loyaltyForm.mobile}
-                      onChange={(e) => handleLoyaltyChange("mobile", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Email Address</label>
-                    <input
-                      type="email"
-                      placeholder="e.g. name@email.com"
-                      value={loyaltyForm.email}
-                      onChange={(e) => handleLoyaltyChange("email", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Preferred Branch</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. Bangna, Ekkamai, Rama 2..."
-                      value={loyaltyForm.branch}
-                      onChange={(e) => handleLoyaltyChange("branch", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  className="w-full bg-[#FFC72C] hover:bg-[#f0b81e] text-black h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
-                  onClick={handleLoyaltySubmit}
-                >
-                  Join JOY Card
-                </button>
-
-                <p className="text-[10px] text-center text-gray-400">Free to join. Collect points automatically with every purchase.</p>
-              </div>
-            )}
-          </div>
-
+          
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
 
             <div className="flex items-center mb-4">
