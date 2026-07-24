@@ -660,7 +660,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       <ChevronRight className={`h-4 w-4 mr-2 text-black transition-transform duration-200 ${expandedProducts.includes(product.id) ? "rotate-90" : ""}`} />
                       <div>
                         <div className="font-medium text-sm text-gray-900">{product.name}</div>
-                        <div className="text-xs text-gray-500">{product.category} · {product.size}</div>
+                        
                       </div>
                     </div>
                     <div className="text-right">
