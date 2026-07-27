@@ -1061,7 +1061,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
               <button onClick={() => handleSocialLink("https://www.y3.com")} className="flex flex-col items-center">
                 <div className="w-9 h-9 rounded-full bg-black flex items-center justify-center mb-1">
-                  <ExternalLink className="h-4 w-4 text-[#652D89]" />
+                  <ExternalLink className="h-4 w-4 text-[#FFFFFF]" />
                 </div>
                 <span className="text-[11px] font-medium text-gray-700">Website</span>
               </button>
