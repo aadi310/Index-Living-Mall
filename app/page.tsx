@@ -232,11 +232,11 @@ export default function Home() {
 
   const receipts = {
     current: {
-      id: "ILMBKK78912XQ",
+      id: "Y3BKK78912XQ",
       date: "18-07-2026",
       time: "16:42:05",
       associate: "Somchai Boonmee",
-      branch: "Index Living Mall – Bangna",
+      branch: "Y3 – Bangna",
       items: [
         {
           id: 0,
@@ -284,11 +284,11 @@ export default function Home() {
     },
 
     hist1: {
-      id: "ILMBKK65432LP",
+      id: "Y3BKK65432LP",
       date: "02-06-2026",
       time: "11:15:40",
       associate: "Ananya Suwannarat",
-      branch: "Index Living Mall – Ekkamai",
+      branch: "Y3 – Ekkamai",
       items: [
         {
           id: 0,
@@ -323,11 +323,11 @@ export default function Home() {
     },
 
     hist2: {
-      id: "ILMBKK54219QW",
+      id: "Y3BKK54219QW",
       date: "10-04-2026",
       time: "17:30:12",
       associate: "Kittipong Chaisri",
-      branch: "Index Living Mall – Rama 2 (Flagship)",
+      branch: "Y3 – Rama 2 (Flagship)",
       items: [
         {
           id: 0,
@@ -370,11 +370,11 @@ export default function Home() {
     {
       id: "current",
       date: "18-07-2026",
-      branch: "Index Living Mall",
+      branch: "Y3",
       amount: currentReceiptId === "current" ? receipts.current.subtotal + receipts.current.tax : 55870.0,
     },
-    { id: "hist1", date: "02-06-2026", branch: "Index Living Mall", amount: 5280.0 },
-    { id: "hist2", date: "10-04-2026", branch: "Index Living Mall", amount: 9785.0 },
+    { id: "hist1", date: "02-06-2026", branch: "Y3", amount: 5280.0 },
+    { id: "hist2", date: "10-04-2026", branch: "Y3", amount: 9785.0 },
   ]
 
   const toggleProductExpansion = (productId: number) => {
@@ -451,7 +451,7 @@ export default function Home() {
   }
 
   const handleEmailReceipt = () => {
-    window.open(`mailto:?subject=Receipt from Index Living Mall&body=Order ID: ${currentReceipt.id}`)
+    window.open(`mailto:?subject=Receipt from Y3&body=Order ID: ${currentReceipt.id}`)
   }
 
   const handleDownloadReceipt = () => {
@@ -460,7 +460,7 @@ export default function Home() {
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index Living Mall Digital Receipt</title>
+<title>Y3 Digital Receipt</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -471,11 +471,11 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 .bill-info{text-align:right;font-size:12px;}
 .bill-info div{margin-bottom:4px;}
 .bill-id{font-weight:600;color:#111111;}
-.customer-section{background:#FFF8E1;padding:14px;border-left:4px solid #FFC72C;border-radius:0 8px 8px 0;margin-bottom:22px;}
+.customer-section{background:#F3EAF7;padding:14px;border-left:4px solid #652D89;border-radius:0 8px 8px 0;margin-bottom:22px;}
 .customer-section h3{font-size:15px;color:#111111;font-weight:600;margin-bottom:2px;}
 .customer-section p{font-size:12px;color:#666;}
 .items-table{width:100%;border-collapse:collapse;margin-bottom:24px;}
-.items-table th{background:#111111;color:#FFC72C;padding:10px 8px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;}
+.items-table th{background:#111111;color:#652D89;padding:10px 8px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:0.5px;}
 .items-table td{padding:12px 8px;border-bottom:1px solid #eee;font-size:12px;vertical-align:top;}
 .item-name{font-weight:600;margin-bottom:3px;}
 .item-desc{font-size:11px;color:#666;}
@@ -484,7 +484,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 .items-count{font-weight:600;}
 .totals-table{text-align:right;min-width:200px;}
 .totals-table div{margin-bottom:6px;font-size:13px;}
-.net-total{font-size:18px;font-weight:700;color:#111111;border-top:2px solid #FFC72C;padding-top:6px;margin-top:6px;}
+.net-total{font-size:18px;font-weight:700;color:#111111;border-top:2px solid #652D89;padding-top:6px;margin-top:6px;}
 .footer{text-align:center;margin-top:30px;padding-top:20px;border-top:1px dashed #ccc;font-size:12px;color:#555;}
 .footer strong{color:#111111;}
 .powered{margin-top:10px;font-size:10px;color:#999;font-weight:600;}
@@ -495,12 +495,12 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
 <div class="receipt-header">
   <div class="company-info">
-    <h1>Index Living Mall</h1>
+    <h1>Y3</h1>
     <p>
-      <strong>Index Living Mall Public Company Limited</strong><br>
-      147 Soi Rama 2 (Soi 50), Rama 2 Road<br>
-      Samae Dam, Bang Khun Thian<br>
-      Bangkok 10150, Thailand
+      <strong>Y3</strong><br>
+      Store Address Line 1<br>
+      Store Address Line 2<br>
+      Bangkok, Thailand
     </p>
   </div>
   <div class="bill-info">
@@ -512,7 +512,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
 <div class="customer-section">
   <h3>Customer: ${customerName}</h3>
-  <p>Thank you for shopping with Index Living Mall!</p>
+  <p>Thank you for shopping with Y3!</p>
 </div>
 
 <table class="items-table">
@@ -551,8 +551,8 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 </div>
 
 <div class="footer">
-  <p><strong>Khob Khun! See you again at Index Living Mall.</strong></p>
-  <p>Shop again at www.indexlivingmall.com</p>
+  <p><strong>Khob Khun! See you again at Y3.</strong></p>
+  <p>Shop again at www.y3.com</p>
 </div>
 
 </body>
@@ -563,7 +563,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
     const url = URL.createObjectURL(blob)
     const link = document.createElement("a")
     link.href = url
-    link.download = `IndexLivingMall_Receipt_${currentReceipt.id}.html`
+    link.download = `Y3_Receipt_${currentReceipt.id}.html`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -602,10 +602,10 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             <div className="bg-[#111111] px-5 pt-5 pb-6 text-white">
               <div className="flex items-start justify-between">
 
-                {/* Index Living Mall Logo */}
+                {/* Y3 Logo */}
                 <img
-                  src="/images/design-mode/indexmall.png"
-                  alt="Index Living Mall"
+                  src="/images/design-mode/Y3-logo.png"
+                  alt="Y3"
                   className="h-14 w-auto bg-white rounded-lg p-1.5"
                 />
 
@@ -626,21 +626,21 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                   Sawasdee, {customerName}
                 </div>
                 <div className="text-sm opacity-90">
-                  Your Index Living Mall order is confirmed
+                  Your Y3 order is confirmed
                 </div>
               </div>
 
               {/* Amount */}
-              <div className="mt-4 bg-[#FFC72C] rounded-xl p-4 flex justify-between items-center">
+              <div className="mt-4 bg-[#652D89] rounded-xl p-4 flex justify-between items-center">
                 <div>
-                  <div className="text-xs text-black/70">
+                  <div className="text-xs text-white/70">
                     Amount Paid
                   </div>
-                  <div className="text-3xl font-semibold text-black">
+                  <div className="text-3xl font-semibold text-white">
                     {fmt(currentReceipt.total)}
                   </div>
                 </div>
-                <User2 className="h-7 w-7 text-black/60" />
+                <User2 className="h-7 w-7 text-white/60" />
               </div>
             </div>
 
@@ -665,16 +665,16 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold flex items-center text-black">
                 <ShoppingBagIcon className="mr-2 h-5 w-5" />
-                Your Index Living Mall Order
+                Your Y3 Order
               </h3>
-              <span className="text-xs font-medium border-2 border-[#FFC72C] text-black px-2 py-1 rounded-full">
+              <span className="text-xs font-medium border-2 border-[#652D89] text-black px-2 py-1 rounded-full">
                 {currentReceipt.items.length} items
               </span>
             </div>
 
             <div className="space-y-3">
               {currentReceipt.items.map((product) => (
-                <div key={product.id} className="bg-[#FFF8E1] rounded-xl p-3 border border-[#FFE58A]">
+                <div key={product.id} className="bg-[#F3EAF7] rounded-xl p-3 border border-[#D9B8E8]">
 
                   <div className="flex items-center justify-between cursor-pointer" onClick={() => toggleProductExpansion(product.id)}>
                     <div className="flex items-center flex-1">
@@ -691,7 +691,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                   </div>
 
                   {expandedProducts.includes(product.id) && (
-                    <div className="mt-3 pt-3 border-t border-[#FFE58A] text-xs text-gray-600 grid grid-cols-2 gap-y-1">
+                    <div className="mt-3 pt-3 border-t border-[#D9B8E8] text-xs text-gray-600 grid grid-cols-2 gap-y-1">
                       <div>Item Code: {product.itemCode}</div>
                       <div>Variant: {product.size}</div>
                       <div>Base: {fmt(product.baseAmount)}</div>
@@ -730,7 +730,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       <div className="flex justify-center gap-2 mb-3">
                         {[1, 2, 3, 4, 5].map((star) => (
                           <button key={star} onClick={() => setItemRating(product.id, star)}>
-                            <Star className={`h-5 w-5 ${star <= (itemFeedback[product.id]?.rating || 0) ? "fill-[#FFC72C] text-[#FFC72C]" : "text-gray-300"}`} />
+                            <Star className={`h-5 w-5 ${star <= (itemFeedback[product.id]?.rating || 0) ? "fill-[#652D89] text-[#652D89]" : "text-gray-300"}`} />
                           </button>
                         ))}
                       </div>
@@ -748,7 +748,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       <div className="mt-4">
                         <button
                           onClick={() => submitItemFeedback(product.id)}
-                          className="w-full bg-[#FFC72C] hover:bg-[#f0b81e] text-black text-sm font-semibold py-2.5 rounded-lg transition-colors"
+                          className="w-full bg-[#652D89] hover:bg-[#551f75] text-white text-sm font-semibold py-2.5 rounded-lg transition-colors"
                         >
                           Submit Feedback
                         </button>
@@ -773,7 +773,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-[#FFC72C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#652D89]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                       <line x1="1" y1="10" x2="23" y2="10"></line>
                     </svg>
@@ -788,7 +788,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             </div>
           </div>
 
-          {/* Index Living Mall Promo Banners — 1920x775 aspect ratio */}
+          {/* Y3 Promo Banners — 1920x775 aspect ratio */}
 
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md overflow-hidden mx-3 mt-4 relative font-poppins">
 
@@ -797,18 +797,18 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
                 {/* Banner 1 — Flash Deal */}
                 <CarouselItem>
-                  <div className="relative w-full aspect-[1920/775] bg-[#FFF8E1]">
-                    <a href="https://www.indexlivingmall.com/online-promotion/flash-deal" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
-                      <Image src="/images/design-mode/index-banner-1.png" alt="Index Living Mall Flash Deal" fill className="object-cover" priority />
+                  <div className="relative w-full aspect-[1920/775] bg-[#F3EAF7]">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
+                      <Image src="/images/design-mode/index-banner-1.png" alt="Y3 Flash Deal" fill className="object-cover" priority />
                     </a>
                   </div>
                 </CarouselItem>
 
                 {/* Banner 2 — Work Space */}
                 <CarouselItem>
-                  <div className="relative w-full aspect-[1920/775] bg-[#FFF8E1]">
-                    <a href="https://www.indexlivingmall.com/online-promotion/work-space" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
-                      <Image src="/images/design-mode/index-banner-2.png" alt="Index Living Mall Work Space Promotion" fill className="object-cover" />
+                  <div className="relative w-full aspect-[1920/775] bg-[#F3EAF7]">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="absolute inset-0">
+                      <Image src="/images/design-mode/index-banner-2.png" alt="Y3 Promotion" fill className="object-cover" />
                     </a>
                   </div>
                 </CarouselItem>
@@ -818,7 +818,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
               <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10">
                 {[0, 1].map((index) => (
                   <button key={index} onClick={() => promoApi?.scrollTo(index)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${currentSlide === index ? "w-5 bg-[#FFC72C]" : "w-1.5 bg-white/70"}`} />
+                    className={`h-1.5 rounded-full transition-all duration-300 ${currentSlide === index ? "w-5 bg-[#652D89]" : "w-1.5 bg-white/70"}`} />
                 ))}
               </div>
             </Carousel>
@@ -840,7 +840,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
               <div className="space-y-4">
                 <div className="flex items-center mb-1">
                   <div className="bg-black p-2 rounded-lg mr-3">
-                    <Gift className="h-4 w-4 text-[#FFC72C]" />
+                    <Gift className="h-4 w-4 text-[#652D89]" />
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-900">Join JOY Card</h3>
@@ -856,7 +856,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       placeholder="e.g. Nichakarn Srisuk"
                       value={loyaltyForm.name}
                       onChange={(e) => handleLoyaltyChange("name", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#652D89] focus:border-[#652D89] outline-none"
                     />
                   </div>
 
@@ -867,7 +867,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       placeholder="e.g. 08X-XXX-XXXX"
                       value={loyaltyForm.mobile}
                       onChange={(e) => handleLoyaltyChange("mobile", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#652D89] focus:border-[#652D89] outline-none"
                     />
                   </div>
 
@@ -878,7 +878,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       placeholder="e.g. name@email.com"
                       value={loyaltyForm.email}
                       onChange={(e) => handleLoyaltyChange("email", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#652D89] focus:border-[#652D89] outline-none"
                     />
                   </div>
 
@@ -889,13 +889,13 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       placeholder="e.g. Bangna, Ekkamai, Rama 2..."
                       value={loyaltyForm.branch}
                       onChange={(e) => handleLoyaltyChange("branch", e.target.value)}
-                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none"
+                      className="w-full p-2.5 text-sm border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#652D89] focus:border-[#652D89] outline-none"
                     />
                   </div>
                 </div>
 
                 <button
-                  className="w-full bg-[#FFC72C] hover:bg-[#f0b81e] text-black h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
+                  className="w-full bg-[#652D89] hover:bg-[#551f75] text-white h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
                   onClick={handleLoyaltySubmit}
                 >
                   Join JOY Card
@@ -917,18 +917,18 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                   </svg>
                 </div>
                 <div className="text-sm font-semibold text-gray-900 mb-1">Thanks for your feedback!</div>
-                <div className="text-xs text-gray-500">Your input helps us improve every Index Living Mall experience.</div>
+                <div className="text-xs text-gray-500">Your input helps us improve every Y3 experience.</div>
               </div>
             ) : (
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="bg-black p-2 rounded-lg mr-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-[#FFC72C]" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-[#652D89]" fill="currentColor">
                         <path d="M11.5 2C7 2 3.5 5.3 3.5 9.5c0 2.4 1.2 4.4 3.1 5.7L6 22l5.1-2.6c.5.1 1 .1 1.5.1 4.5 0 8-3.3 8-7.5S16 2 11.5 2z" />
                       </svg>
                     </div>
-                    <h3 className="text-base font-semibold text-gray-900">Rate Your Index Living Mall Experience</h3>
+                    <h3 className="text-base font-semibold text-gray-900">Rate Your Y3 Experience</h3>
                   </div>
                 </div>
 
@@ -945,7 +945,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                       <Star
                         className={`h-8 w-8 transition-colors ${
                           star <= rating
-                            ? "fill-[#FFC72C] text-[#FFC72C]"
+                            ? "fill-[#652D89] text-[#652D89]"
                             : "text-gray-300"
                         }`}
                       />
@@ -973,36 +973,36 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
                 <div className="space-y-1">
                   <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Additional Feedback (Optional)</label>
-                  <textarea rows={3} placeholder="Tell us about your Index Living Mall order"
-                    className="w-full p-3 text-xs border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#FFC72C] focus:border-[#FFC72C] outline-none resize-none"
+                  <textarea rows={3} placeholder="Tell us about your Y3 order"
+                    className="w-full p-3 text-xs border border-gray-200 rounded-xl focus:ring-1 focus:ring-[#652D89] focus:border-[#652D89] outline-none resize-none"
                     value={feedbackText} onChange={(e) => setFeedbackText(e.target.value)} />
                 </div>
 
-                <button className="w-full bg-[#FFC72C] hover:bg-[#f0b81e] text-black h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
+                <button className="w-full bg-[#652D89] hover:bg-[#551f75] text-white h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
                   onClick={handleFeedbackSubmit} disabled={!rating}>
                   Submit Feedback
                 </button>
 
-                <p className="text-[10px] text-center text-gray-400">Your feedback helps Index Living Mall improve every order.</p>
+                <p className="text-[10px] text-center text-gray-400">Your feedback helps Y3 improve every order.</p>
               </div>
             )}
           </div>
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
             <div className="grid grid-cols-3 gap-3">
               <button ref={historyButtonRef} onClick={handleTransactionHistoryOpen}
-                className="flex flex-col items-center justify-center bg-[#FFF8E1] border border-[#FFE58A] rounded-xl py-3 active:scale-[0.98]">
+                className="flex flex-col items-center justify-center bg-[#F3EAF7] border border-[#D9B8E8] rounded-xl py-3 active:scale-[0.98]">
                 <History className="h-5 w-5 text-black mb-1" />
                 <span className="text-[11px] font-medium text-gray-700">Orders</span>
               </button>
 
               <button onClick={handleEmailReceipt}
-                className="flex flex-col items-center justify-center bg-[#FFF8E1] border border-[#FFE58A] rounded-xl py-3 active:scale-[0.98]">
+                className="flex flex-col items-center justify-center bg-[#F3EAF7] border border-[#D9B8E8] rounded-xl py-3 active:scale-[0.98]">
                 <Mail className="h-5 w-5 text-black mb-1" />
                 <span className="text-[11px] font-medium text-gray-700">Email</span>
               </button>
 
               <button onClick={handleDownloadReceipt}
-                className="flex flex-col items-center justify-center bg-[#FFF8E1] border border-[#FFE58A] rounded-xl py-3 active:scale-[0.98]">
+                className="flex flex-col items-center justify-center bg-[#F3EAF7] border border-[#D9B8E8] rounded-xl py-3 active:scale-[0.98]">
                 <Download className="h-5 w-5 text-black mb-1" />
                 <span className="text-[11px] font-medium text-gray-700">Download</span>
               </button>
@@ -1013,21 +1013,21 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
             <div className="flex items-center mb-3">
               <div className="bg-black p-2 rounded-lg mr-3">
-                <Send className="h-4 w-4 text-[#FFC72C]" />
+                <Send className="h-4 w-4 text-[#652D89]" />
               </div>
-              <h3 className="text-sm font-semibold text-gray-900">Index Living Mall Support</h3>
+              <h3 className="text-sm font-semibold text-gray-900">Y3 Support</h3>
             </div>
 
             <div className="grid grid-cols-3 gap-3">
-              <button onClick={handleWhatsApp} className="flex flex-col items-center justify-center bg-[#FFF8E1] border border-[#FFE58A] rounded-xl py-3 active:scale-[0.98]">
+              <button onClick={handleWhatsApp} className="flex flex-col items-center justify-center bg-[#F3EAF7] border border-[#D9B8E8] rounded-xl py-3 active:scale-[0.98]">
                 <MessageSquare className="h-5 w-5 text-black mb-1" />
                 <span className="text-[11px] font-medium text-gray-700">Chat</span>
               </button>
-              <button onClick={handleCall} className="flex flex-col items-center justify-center bg-[#FFF8E1] border border-[#FFE58A] rounded-xl py-3 active:scale-[0.98]">
+              <button onClick={handleCall} className="flex flex-col items-center justify-center bg-[#F3EAF7] border border-[#D9B8E8] rounded-xl py-3 active:scale-[0.98]">
                 <Phone className="h-5 w-5 text-black mb-1" />
                 <span className="text-[11px] font-medium text-gray-700">Call</span>
               </button>
-              <button onClick={handleEmail} className="flex flex-col items-center justify-center bg-[#FFF8E1] border border-[#FFE58A] rounded-xl py-3 active:scale-[0.98]">
+              <button onClick={handleEmail} className="flex flex-col items-center justify-center bg-[#F3EAF7] border border-[#D9B8E8] rounded-xl py-3 active:scale-[0.98]">
                 <Mail className="h-5 w-5 text-black mb-1" />
                 <span className="text-[11px] font-medium text-gray-700">Email</span>
               </button>
@@ -1039,29 +1039,29 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
             <div className="flex items-center mb-4">
               <div className="bg-black p-2 rounded-lg mr-3">
-                <Share2 className="h-4 w-4 text-[#FFC72C]" />
+                <Share2 className="h-4 w-4 text-[#652D89]" />
               </div>
               <h3 className="text-sm font-semibold text-gray-900">Stay Connected</h3>
             </div>
 
             <div className="flex justify-center space-x-6 mb-4">
-              <button onClick={() => handleSocialLink("https://www.instagram.com/indexlivingmall/")} className="flex flex-col items-center">
+              <button onClick={() => handleSocialLink("https://www.instagram.com")} className="flex flex-col items-center">
                 <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center mb-1">
                   <Instagram className="h-4 w-4 text-white" />
                 </div>
                 <span className="text-[11px] font-medium text-gray-700">Instagram</span>
               </button>
 
-              <button onClick={() => handleSocialLink("https://www.facebook.com/indexlivingmall")} className="flex flex-col items-center">
+              <button onClick={() => handleSocialLink("https://www.facebook.com")} className="flex flex-col items-center">
                 <div className="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center mb-1">
                   <Facebook className="h-4 w-4 text-white" />
                 </div>
                 <span className="text-[11px] font-medium text-gray-700">Facebook</span>
               </button>
 
-              <button onClick={() => handleSocialLink("https://www.indexlivingmall.com")} className="flex flex-col items-center">
+              <button onClick={() => handleSocialLink("https://www.y3.com")} className="flex flex-col items-center">
                 <div className="w-9 h-9 rounded-full bg-black flex items-center justify-center mb-1">
-                  <ExternalLink className="h-4 w-4 text-[#FFC72C]" />
+                  <ExternalLink className="h-4 w-4 text-[#652D89]" />
                 </div>
                 <span className="text-[11px] font-medium text-gray-700">Website</span>
               </button>
@@ -1073,16 +1073,16 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                 className="w-full flex items-center justify-center mb-2 hover:text-black transition-colors">
                 <MapPin className="h-3 w-3 mr-1 text-black" />
                 <span className="font-semibold text-black">
-                  Index Living Mall – {currentReceipt.branch.replace("Index Living Mall – ", "")} {showStoreLocation ? "▲" : "▼"}
+                  Y3 – {currentReceipt.branch.replace("Y3 – ", "")} {showStoreLocation ? "▲" : "▼"}
                 </span>
               </button>
 
               {showStoreLocation && (
                 <div className="space-y-0.5">
-                  <p className="font-semibold text-gray-900">Index Living Mall Public Company Limited</p>
-                  <p>147 Soi Rama 2 (Soi 50), Rama 2 Road</p>
-                  <p>Samae Dam, Bang Khun Thian</p>
-                  <p>Bangkok 10150, Thailand</p>
+                  <p className="font-semibold text-gray-900">Y3</p>
+                  <p>Store Address Line 1</p>
+                  <p>Store Address Line 2</p>
+                  <p>Bangkok, Thailand</p>
                   <p className="mt-2 text-[10px]">Tax ID: 010753XXXXXXX</p>
                   <p className="mt-1 text-black font-semibold">Store Manager: {currentReceipt.associate}</p>
                 </div>
@@ -1099,7 +1099,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                 <p>• Offers and coupons are subject to availability and location.</p>
                 <p>• Prices include applicable VAT.</p>
                 <p>• JOY Card points are non-transferable and valid for 12 months from the date of purchase.</p>
-                <p>• For support visit www.indexlivingmall.com.</p>
+                <p>• For support visit www.y3.com.</p>
               </div>
             )}
           </div>
@@ -1165,7 +1165,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                         <Star
                           className={`h-5 w-5 ${
                             feedback[category.key as keyof typeof feedback] >= star
-                              ? "text-[#FFC72C] fill-[#FFC72C]"
+                              ? "text-[#652D89] fill-[#652D89]"
                               : "text-gray-300"
                           }`}
                         />
@@ -1209,7 +1209,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
                 <div className="flex items-center">
                   <div className="bg-black p-2 rounded-lg mr-3">
-                    <History className="h-4 w-4 text-[#FFC72C]" />
+                    <History className="h-4 w-4 text-[#652D89]" />
                   </div>
                   <h3 className="text-sm font-semibold text-gray-900">
                     Order History
@@ -1252,7 +1252,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
                     <div className="flex-grow text-left">
                       <div className="text-sm font-semibold text-gray-900">
-                        Index Living Mall
+                        Y3
                       </div>
                       <div className="text-[11px] text-gray-500">
                         {transaction.date}
@@ -1310,17 +1310,17 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
             </div>
             <div className="p-4 space-y-4">
               <div className="text-center">
-                <div className="w-16 h-16 bg-[#FFF4CC] rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-16 h-16 bg-[#F3EAF7] rounded-full flex items-center justify-center mx-auto mb-3">
                   <Share2 className="h-8 w-8 text-black" />
                 </div>
                 <h4 className="text-lg font-semibold text-black mb-2">Share & Earn ฿500!</h4>
                 <p className="text-sm text-gray-600 mb-4">
-                  Refer friends to Index Living Mall and both of you get ฿500 off your next purchase!
+                  Refer friends to Y3 and both of you get ฿500 off your next purchase!
                 </p>
               </div>
-              <div className="bg-[#FFF8E1] p-3 rounded-lg border border-[#FFE58A]">
+              <div className="bg-[#F3EAF7] p-3 rounded-lg border border-[#D9B8E8]">
                 <div className="text-xs font-medium text-black mb-1">Your Referral Code</div>
-                <div className="text-lg font-bold text-black text-center">ILM{customerName.toUpperCase()}500</div>
+                <div className="text-lg font-bold text-black text-center">Y3{customerName.toUpperCase()}500</div>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <Button
@@ -1328,7 +1328,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                   className="border-black text-black hover:bg-gray-50 bg-transparent"
                   onClick={() => {
                     navigator.clipboard.writeText(
-                      `Try Index Living Mall! Use code ILM${customerName.toUpperCase()}500 for ฿500 off!`,
+                      `Try Y3! Use code Y3${customerName.toUpperCase()}500 for ฿500 off!`,
                     )
                     setShowReferModal(false)
                   }}
@@ -1336,10 +1336,10 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                   Copy Code
                 </Button>
                 <Button
-                  className="bg-[#FFC72C] hover:bg-[#f0b81e] text-black font-semibold"
+                  className="bg-[#652D89] hover:bg-[#551f75] text-white font-semibold"
                   onClick={() => {
                     window.open(
-                      `https://wa.me/?text=Try Index Living Mall! Use my code ILM${customerName.toUpperCase()}500 for ฿500 off your next purchase!`,
+                      `https://wa.me/?text=Try Y3! Use my code Y3${customerName.toUpperCase()}500 for ฿500 off your next purchase!`,
                     )
                     setShowReferModal(false)
                   }}
