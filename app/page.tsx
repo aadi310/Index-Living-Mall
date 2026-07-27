@@ -773,7 +773,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center mr-3">
-                    <svg className="w-4 h-4 text-[#652D89]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#FFFFFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                       <line x1="1" y1="10" x2="23" y2="10"></line>
                     </svg>
@@ -840,7 +840,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
               <div className="space-y-4">
                 <div className="flex items-center mb-1">
                   <div className="bg-black p-2 rounded-lg mr-3">
-                    <Gift className="h-4 w-4 text-[#652D89]" />
+                    <Gift className="h-4 w-4 text-[#FFFFFF]" />
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-900">Join JOY Card</h3>
@@ -924,7 +924,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="bg-black p-2 rounded-lg mr-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-[#652D89]" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-[#FFFFFF]" fill="currentColor">
                         <path d="M11.5 2C7 2 3.5 5.3 3.5 9.5c0 2.4 1.2 4.4 3.1 5.7L6 22l5.1-2.6c.5.1 1 .1 1.5.1 4.5 0 8-3.3 8-7.5S16 2 11.5 2z" />
                       </svg>
                     </div>
@@ -1013,7 +1013,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
           <div className="bg-white rounded-2xl border border-gray-200 shadow-md mx-3 mt-4 p-4 font-poppins">
             <div className="flex items-center mb-3">
               <div className="bg-black p-2 rounded-lg mr-3">
-                <Send className="h-4 w-4 text-[#652D89]" />
+                <Send className="h-4 w-4 text-[#FFFFFF]" />
               </div>
               <h3 className="text-sm font-semibold text-gray-900">Y3 Support</h3>
             </div>
@@ -1039,7 +1039,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
 
             <div className="flex items-center mb-4">
               <div className="bg-black p-2 rounded-lg mr-3">
-                <Share2 className="h-4 w-4 text-[#652D89]" />
+                <Share2 className="h-4 w-4 text-[#FFFFFF]" />
               </div>
               <h3 className="text-sm font-semibold text-gray-900">Stay Connected</h3>
             </div>
