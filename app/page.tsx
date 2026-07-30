@@ -833,7 +833,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <div className="text-sm font-semibold text-gray-900 mb-1">Welcome to JOY Card!</div>
+                <div className="text-sm font-semibold text-gray-900 mb-1">Welcome to Our Loyalty Card!</div>
                 <div className="text-xs text-gray-500">We'll send your membership confirmation to your email shortly.</div>
               </div>
             ) : (
@@ -843,7 +843,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                     <Gift className="h-4 w-4 text-[#FFFFFF]" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-900">Join JOY Card</h3>
+                    <h3 className="text-sm font-semibold text-gray-900">Join Y3 Loyalty</h3>
                     <p className="text-[11px] text-gray-500">Earn points on every purchase & unlock member-only deals</p>
                   </div>
                 </div>
@@ -898,7 +898,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
                   className="w-full bg-[#652D89] hover:bg-[#551f75] text-white h-10 text-xs font-semibold rounded-xl transition active:scale-[0.98]"
                   onClick={handleLoyaltySubmit}
                 >
-                  Join JOY Card
+                  Join Y3 Loyalty
                 </button>
 
                 <p className="text-[10px] text-center text-gray-400">Free to join. Collect points automatically with every purchase.</p>
@@ -1098,7 +1098,7 @@ body{font-family:'Poppins',sans-serif;font-size:14px;color:#111;background:#fff;
               <div className="text-[11px] text-gray-500 mt-2 space-y-1 px-2 font-medium">
                 <p>• Offers and coupons are subject to availability and location.</p>
                 <p>• Prices include applicable VAT.</p>
-                <p>• JOY Card points are non-transferable and valid for 12 months from the date of purchase.</p>
+                <p>• Loyalty Card points are non-transferable and valid for 12 months from the date of purchase.</p>
                 <p>• For support visit www.y3.com.</p>
               </div>
             )}
